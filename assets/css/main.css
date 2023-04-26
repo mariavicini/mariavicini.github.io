@@ -7,16 +7,16 @@
  ******************************************************************************/
 :root {
   --global-bg-color: #ffffff;
-  --global-code-bg-color: rgba(181, 9, 172, 0.05);
-  --global-text-color: #000000;
-  --global-text-color-light: #828282;
-  --global-theme-color: #B509AC;
-  --global-hover-color: #B509AC;
-  --global-footer-bg-color: #1C1C1D;
-  --global-footer-text-color: #e8e8e8;
-  --global-footer-link-color: #ffffff;
-  --global-distill-app-color: #828282;
-  --global-divider-color: rgba(0,0,0,.1);
+  --global-code-bg-color: #eddded;
+  --global-text-color: #78a088;
+  --global-text-color-light: #eddded;
+  --global-theme-color: #28400e;
+  --global-hover-color: #28400e;
+  --global-footer-bg-color: #eddded;
+  --global-footer-text-color: #28400e;
+  --global-footer-link-color: #78a088;
+  --global-distill-app-color: #78a088;
+  --global-divider-color: rgba($brandcolor-mil-green,.1);
   --global-card-bg-color: #ffffff;
 }
 :root .fa-sun {
@@ -84,7 +84,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 960px;
 }
 
 .profile img {
