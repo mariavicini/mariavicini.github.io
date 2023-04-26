@@ -5,6 +5,7 @@
 /*******************************************************************************
  * Themes
  ******************************************************************************/
+@import url("https://fonts.cdnfonts.com/css/neutra-text-tf");
 :root {
   --global-bg-color: #ffffff;
   --global-code-bg-color: #eddded;
@@ -16,8 +17,11 @@
   --global-footer-text-color: #28400e;
   --global-footer-link-color: #78a088;
   --global-distill-app-color: #78a088;
-  --global-divider-color: rgba($brandcolor-mil-green,.1);
+  --global-divider-color: rgba($brandcolor-mil-green, 0.1);
   --global-card-bg-color: #ffffff;
+  --brandcolor-green: #78a088;
+  --brandcolor-mil: #28400e;
+  --brandcolor-pink: #eddded;
 }
 :root .fa-sun {
   display: none;
@@ -63,6 +67,50 @@ html[data-theme=dark] .repo-img-dark {
   display: block;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+html {
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.magictime.magic.about-logo {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
 /******************************************************************************
  * Content
  ******************************************************************************/
@@ -71,7 +119,12 @@ body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   scroll-margin-top: 66px;
 }
 
@@ -97,6 +150,17 @@ body.sticky-bottom-footer {
 /*****************************************************************************
 * Projects
 *****************************************************************************/
+.bg-dots-pink {
+  background-image: radial-gradient(var(--brandcolor-pink) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.bg-cross-dots-pink {
+  background-image: radial-gradient(var(--brandcolor-pink) 1px, transparent 1px), radial-gradient(var(--brandcolor-pink) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
@@ -910,6 +974,10 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
   d-article d-contents nav {
     grid-column: none;
   }
+}
+body {
+  font-family: "Neutra Text TF Light", sans-serif;
+  font-size: 120%;
 }
 
 /*# sourceMappingURL=main.css.map */
