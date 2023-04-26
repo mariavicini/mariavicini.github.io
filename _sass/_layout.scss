@@ -7,7 +7,12 @@ body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     scroll-margin-top: 66px;
   }
 }
@@ -35,16 +40,29 @@ body.sticky-bottom-footer {
 
 // TODO: redefine content layout.
 
-
 /******************************************************************************
  * Publications
  ******************************************************************************/
 
 // TODO: redefine publications layout.
 
-
 /*****************************************************************************
 * Projects
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+.bg-dots-pink {
+  background-image: radial-gradient(
+    var(--brandcolor-pink) 1px,
+    transparent 1px
+  );
+  background-size: calc(10 * 1px) calc(10 * 1px);
+}
+
+.bg-cross-dots-pink {
+  background-image: radial-gradient(var(--brandcolor-pink) 1px, transparent 1px),
+    radial-gradient(var(--brandcolor-pink) 1px, transparent 1px);
+  background-size: calc(20 * 1px) calc(20 * 1px);
+  background-position: 0 0, calc(10 * 1px) calc(10 * 1px);
+}
