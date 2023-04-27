@@ -40,8 +40,8 @@
     <!-- https://github.com/miniMAC/magic -->
     <link rel="stylesheet" href="/assets/css/magic.min.css">
 
-    <!-- https://github.com/bansal/pattern.css -->
-    <link rel="stylesheet" href="/assets/css/pattern.min.css">
+    <!-- https://github.com/bansal/pattern.css
+    <link rel="stylesheet" href="/assets/css/pattern.min.css"> -->
 
   </head>
 
@@ -52,7 +52,7 @@
     <header>
 
       <!-- Nav Bar -->
-      <nav id="navbar" class="bg-dots-pink navbar navbar-light navbar-expand-sm fixed-top">
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
           <a class="navbar-brand title font-weight-lighter" href="//">
             <img class="img-fluid" src="/assets/img/logo-orizzontale.png" width="250" height="95" alt="logo">
@@ -81,16 +81,15 @@
 
               <!-- Other pages -->
               <li class="nav-item ">
-                <a class="nav-link" href="/publications/">pubblicazioni</a>
+                <a class="nav-link" href="/projects/">aree di interesse</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/projects/">progetti</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/cv/">cv</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/teaching/">docenze</a>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">esperienze</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/cv/">cv</a>
+                  <a class="dropdown-item" href="/publications/">pubblicazioni</a>
+                  <a class="dropdown-item" href="/teaching/">docenze</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -107,7 +106,7 @@
 
 
     <!-- Content -->
-    <div class="container mt-5">
+    <div class="container mt-3">
       <!-- _layouts/post.html -->
 
 <div class="post">
@@ -280,25 +279,16 @@ Produces something like this:</p>
   <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
-    
-  <!-- Medium Zoom JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
-  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+    <!-- Load Common JS -->
   <script defer src="/assets/js/common.js"></script>
   <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
 
+  <script defer src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js" crossorigin="anonymous"></script>
+
+  <!-- <script defer type="text/javascript" src="/assets/js/smooth-parallax.min.js"></script> -->
     
 
-    <!-- MathJax -->
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        tags: 'ams'
-      }
-    };
-  </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
 
     
     
@@ -380,5 +370,11 @@ Produces something like this:</p>
   }
 </script>
 
+
+    <!-- <script type="text/javascript">
+      window.addEventListener("load", function () {
+        SmoothParallax.init();
+      });
+    </script> -->
   </body>
 </html>
