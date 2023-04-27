@@ -4,7 +4,7 @@ layout: default
 
 <!-- about.html -->
       <div class="post">
-        <header class="post-header mb-5">
+        <header class="post-header mb-3">
           <!-- <h1 class="post-title">
            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
           </h1> -->
@@ -16,6 +16,10 @@ layout: default
 
         <article>
           {% if page.profile -%}
+          <div data-jarallax data-speed="0.2" class="jarallax my-4">
+            <img class="jarallax-img" src="{{ '/assets/img/parallax/lucian-alexe-KnE3Dzy36ww-unsplash.jpg' | relative_url }}" alt="">
+            &nbsp;
+          </div>
           <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
@@ -51,6 +55,10 @@ layout: default
 
           <!-- Latest posts -->
           {% if page.latest_posts -%}
+            <div data-jarallax data-speed="0.2" class="jarallax my-3">
+              <img class="jarallax-img" src="{{ '/assets/img/parallax/vino-li-w5odnM_GKks-unsplash.jpg' | relative_url }}" alt="">
+              &nbsp;
+            </div>
             <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
             {%- include latest_posts.html %}
           {%- endif %}
@@ -63,6 +71,10 @@ layout: default
 
           <!-- Social -->
           {%- if page.social %}
+            <div data-jarallax data-speed="0.2" class="jarallax my-3">
+              <img class="jarallax-img" src="{{ '/assets/img/parallax/alejandra-cifre-gonzalez-zEAHrzoNvQM-unsplash.jpg' | relative_url }}" alt="">
+              &nbsp;
+            </div>
             <div class="social">
               <div class="contact-icons">
                 {% include social.html %}

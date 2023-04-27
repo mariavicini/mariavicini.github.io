@@ -1,13 +1,15 @@
-<!-- ---
+---
 layout: page
-title: submenus
+title: esperienze
 nav: true
-nav_order: 6
+nav_order: 2
 dropdown: true
-children: 
-    - title: publications
+children:
+    - title: cv
+      permalink: /cv/
+    # - title: divider
+    - title: pubblicazioni
       permalink: /publications/
-    - title: divider
-    - title: projects
-      permalink: /projects/
---- -->
+    - title: docenze
+      permalink: /teaching/
+---
