@@ -1,91 +1,170 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <!-- Head -->
+  <head>
+    {%- if page.redirect -%}
+    <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
+    {%- endif -%} {% include head.html %}
+  </head>
 
-<!-- about.html -->
-      <div class="post">
-        <header class="post-header mb-3">
-          <!-- <h1 class="post-title">
-           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1> -->
-          <h1 class="post-title">
-            <img class="img-fluid d-block mx-auto about-logo magictime tinUpIn" src="{{ '/assets/img/logo-verticale.png' | relative_url }}" width="250" height="95" alt="logo">
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
+  <!-- Body -->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50" class="">
+    <!-- Header -->
+    {%- include header.html %}
 
-        <article>
-          {% if page.profile -%}
-          <div data-jarallax data-speed="0.2" class="jarallax my-4">
-            <img class="jarallax-img" src="{{ '/assets/img/parallax/lucian-alexe-KnE3Dzy36ww-unsplash.jpg' | relative_url }}" alt="">
-            &nbsp;
-          </div>
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
-
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
-
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=page.profile.image -%}
-            {% endif -%}
-            {%- if page.profile.address %}
-            <div class="address">
-              {{ page.profile.address }}
+    <!-- Content -->
+    <div class="container-fluid px-0">
+      <!-- Header -->
+      <header class="header">
+        <div class="container text-center text-white">
+          <div class="row">
+            <div class="col">
+              <h1
+                class="text-white fw-bold text-left"
+                style="font-family: 'Neutra Text TF'"
+              >
+                Welcome to <i>Diet</i> Consultant
+              </h1>
+              <p class="text-white fw-bold text-left">
+                Providing personalized diet plans and professional advice
+              </p>
             </div>
-            {%- endif %}
+            <div class="col"></div>
           </div>
-          {%- endif %}
+        </div>
+      </header>
 
-          <div class="clearfix">
-            {{ content }}
+      <!-- About Section -->
+      <section id="about" class="container py-5">
+        <h2>About</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              At Diet Consultant, we are dedicated to providing personalized
+              diet plans and expert advice for people looking to lead a
+              healthier lifestyle. Our experienced diet professionals create
+              customized meal plans tailored to your specific needs and goals.
+            </p>
           </div>
+          <div class="col-md-6">
+            <p>
+              Whether you're looking to lose weight, manage a health condition,
+              or simply improve your overall well-being, our team is here to
+              help. We take a holistic approach to nutrition, focusing on
+              long-term, sustainable changes that promote health and happiness.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <!-- News -->
-          {% if page.news -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html %}
-          {%- endif %}
-
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <div data-jarallax data-speed="0.2" class="jarallax my-3">
-              <img class="jarallax-img" src="{{ '/assets/img/parallax/vino-li-w5odnM_GKks-unsplash.jpg' | relative_url }}" alt="">
-              &nbsp;
-            </div>
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
-
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
-
-          <!-- Social -->
-          {%- if page.social %}
-            <div data-jarallax data-speed="0.2" class="jarallax my-3">
-              <img class="jarallax-img" src="{{ '/assets/img/parallax/alejandra-cifre-gonzalez-zEAHrzoNvQM-unsplash.jpg' | relative_url }}" alt="">
-              &nbsp;
-            </div>
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
+      <!-- Services Section -->
+      <section id="services" class="bg-light py-5">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="card-img-top"
+                  alt="Weight Loss"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Weight Loss</h5>
+                  <p class="card-text">
+                    Our weight loss program is designed to help you shed pounds
+                    while enjoying a balanced, nutritious diet.
+                  </p>
+                </div>
               </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
             </div>
-          {%- endif %}
-        </article>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="card-img-top"
+                  alt="Health Management"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Health Management</h5>
+                  <p class="card-text">
+                    Our health management program aims to improve your overall
+                    well-being through tailored nutrition plans and expert
+                    advice.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img
+                  src="https://via.placeholder.com/150"
+                  class="card-img-top"
+                  alt="Sports Nutrition"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sports Nutrition</h5>
+                  <p class="card-text">
+                    Our sports nutrition program is designed to help athletes
+                    optimize their performance through targeted meal plans and
+                    guidance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</div>
+      <!-- Contact Section -->
+      <section id="contact" class="container py-5">
+        <h2>Contact</h2>
+        <p>
+          If you have any questions or would like to book a consultation, please
+          feel free to get in touch with us.
+        </p>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Full Name"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Your message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    {%- include footer.html %}
+
+    <!-- JavaScripts -->
+    {% include scripts/jquery.html %} {% include scripts/bootstrap.html %} {%
+    include scripts/masonry.html %} {% include scripts/misc.html %} {% include
+    scripts/badges.html %} {% include scripts/mathjax.html %} {% include
+    scripts/analytics.html %}
+  </body>
+</html>
