@@ -5,20 +5,29 @@
 
 // Dimensions
 $max-content-width: {{ site.max_width }};
+$max_width: $max-content-width;
+$min_width: 320px;
+$min_font: 14px;
+$max_font: 22px;
 
 @import
   "variables",
   "themes",
   "layout",
   "base",
-  "distill"
+  "distill",
+  "flowtype"
 ;
 
 @import url("https://fonts.cdnfonts.com/css/neutra-text-tf");
 
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
 body {
   font-family: "Neutra Text TF Light", sans-serif;
-  font-size: 120%;
+  // font-size: 120%;
   position: relative;
 }
 
@@ -52,4 +61,51 @@ body {
   .header {
       background-attachment: scroll;
   }
+}
+
+@-webkit-keyframes slideTopLoop {
+  0% { transform: translateY(70px) }
+  100% { transform: translateY(0) }
+}
+
+@keyframes slideTopLoop {
+  0% { transform: translateY(70px) }
+  100% { transform: translateY(0) }
+}
+
+.post-list *, section *, article *  {
+  animation: slideTopLoop .8s ease;
+}
+
+
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+
+h1 {
+  font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $mod_2 * $min_font
+  );
+}
+h2 {
+  font-size: $mod_1 * $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $mod_2 * $min_font
+  );
+}
+h3 {
+  font-size: $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $min_font
+  );
 }
