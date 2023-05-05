@@ -975,9 +975,25 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
     grid-column: none;
   }
 }
+html {
+  font-size: 14px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(
+          14px + 8 *
+            ((100vw - 320px) / 640)
+        );
+  }
+}
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 body {
   font-family: "Neutra Text TF Light", sans-serif;
-  font-size: 120%;
   position: relative;
 }
 
@@ -1011,6 +1027,85 @@ body {
 @media (max-width: 767px) {
   .header {
     background-attachment: scroll;
+  }
+}
+@-webkit-keyframes slideTopLoop {
+  0% {
+    transform: translateY(70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideTopLoop {
+  0% {
+    transform: translateY(70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.post-list *, section *, article * {
+  animation: slideTopLoop 0.8s ease;
+}
+
+h1 {
+  font-size: 2.0736rem;
+}
+h1 {
+  font-size: 24.192px;
+}
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: calc(
+          24.192px + 23.058 *
+            ((100vw - 320px) / 640)
+        );
+  }
+}
+@media screen and (min-width: 960px) {
+  h1 {
+    font-size: 47.25px;
+  }
+}
+
+h2 {
+  font-size: 1.728rem;
+}
+h2 {
+  font-size: 24.192px;
+}
+@media screen and (min-width: 320px) {
+  h2 {
+    font-size: calc(
+          24.192px + 23.058 *
+            ((100vw - 320px) / 640)
+        );
+  }
+}
+@media screen and (min-width: 960px) {
+  h2 {
+    font-size: 47.25px;
+  }
+}
+
+h3 {
+  font-size: 1.44rem;
+}
+h3 {
+  font-size: 20.16px;
+}
+@media screen and (min-width: 320px) {
+  h3 {
+    font-size: calc(
+          20.16px + 11.34 *
+            ((100vw - 320px) / 640)
+        );
+  }
+}
+@media screen and (min-width: 960px) {
+  h3 {
+    font-size: 31.5px;
   }
 }
 
